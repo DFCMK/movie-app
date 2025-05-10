@@ -177,7 +177,18 @@ const createMovieCard = (movies) => {
   }
 };
 
-function handleSearch() {}
+function handleSearch(event) {
+  searchValue = event.target.value.toLowerCase();
+  filteredArrOfMovies = searchValue?.length > 0 ? movies.filter(
+    movie => searchValue === movie.name.toLocaleLowerCase()
+    || searchValue === director_name.toLowerCase()
+    || movie.writter_name.toLowerCase().split(",").includes(searchValue)
+    || movie.cast_name.toLowerCase().split(",").includes(searchValue)
+  ) 
+  : movies;
+  parentElement.innerHTML = "";
+  createMovieCard(filteredArrOfMovies);
+}
 
 seachInput.addEventListener("keyup", handleSearch);
 
