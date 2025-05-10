@@ -170,17 +170,25 @@ const createMovieCard = (movies) => {
   }
 };
 
-function handleSearch(event) {
-  searchValue = event.target.value.toLowerCase();
-  filteredArrOfMovies = searchValue?.length > 0 ? movies.filter(
-    movie => searchValue === movie.name.toLocaleLowerCase()
+function getFilteredData(){
+    filteredArrOfMovies = 
+    searchValue?.length > 0 
+    ? movies.filter(
+    (movie) => 
+      searchValue === movie.name.toLocaleLowerCase()
     || searchValue === director_name.toLowerCase()
     || movie.writter_name.toLowerCase().split(",").includes(searchValue)
     || movie.cast_name.toLowerCase().split(",").includes(searchValue)
   ) 
   : movies;
+}
+
+function handleSearch(event) {
+  searchValue = event.target.value.toLowerCase();
+  let filterBySearch = getFilteredData();
+
   parentElement.innerHTML = "";
-  createMovieCard(filteredArrOfMovies);
+  createMovieCard(filterBySearch);
 }
 
 function debounce(callback, delay) {
@@ -194,8 +202,14 @@ function debounce(callback, delay) {
   };
 }
 
+function handleRatingSelector(event){
+  ratings = event.target.value;
+}
+
 const debounceInput = debounce(handleSearch, 500);
 
 seachInput.addEventListener("keyup", debounceInput);
+
+movieRatings.addEventListener("change", handleRatingSelector);
 
 createMovieCard(movies);
