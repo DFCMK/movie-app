@@ -10,13 +10,6 @@ let filteredArrOfMovies = [];
 
 const URL = "https://movies-app.prakashsakari.repl.co/api/movies";
 
-/*const getMovies = async (url) => {
-  try {
-    const { data } = await axios.get(url);
-    return data;
-  } catch (err) {}
-};*/
-
 let movies = [
   {
     "id": 1,
@@ -201,6 +194,8 @@ function debounce(callback, delay) {
   };
 }
 
-seachInput.addEventListener("keyup", handleSearch);
+const debounceInput = debounce(handleSearch, 500);
+
+seachInput.addEventListener("keyup", debounceInput);
 
 createMovieCard(movies);
