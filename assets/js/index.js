@@ -190,6 +190,17 @@ function handleSearch(event) {
   createMovieCard(filteredArrOfMovies);
 }
 
+function debounce(callback, delay) {
+  let timerId;
+
+  return (...args) => {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => {
+      callback(...args);
+    }, delay);
+  };
+}
+
 seachInput.addEventListener("keyup", handleSearch);
 
 createMovieCard(movies);
