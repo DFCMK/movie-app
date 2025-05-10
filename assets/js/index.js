@@ -181,6 +181,13 @@ function getFilteredData(){
     || movie.cast_name.toLowerCase().split(",").includes(searchValue)
   ) 
   : movies;
+  if (ratings > 0){
+    filteredArrOfMovies = searchValue?.length > 0 
+    ? filteredArrOfMovies : movies;
+    filteredArrOfMovies = filteredArrOfMovies.filter(
+      movie => movie.imdb_rating >= ratings);
+  }
+  return filteredArrOfMovies;
 }
 
 function handleSearch(event) {
@@ -204,6 +211,9 @@ function debounce(callback, delay) {
 
 function handleRatingSelector(event){
   ratings = event.target.value;
+  let filterByRating = getFilteredData();
+  parentElement.innerHTML = "";
+  createMovieCard(ratings ? filterByRating : movies)
 }
 
 const debounceInput = debounce(handleSearch, 500);
