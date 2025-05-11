@@ -1,5 +1,5 @@
 const parentElement = document.querySelector(".main");
-const seachInput = document.querySelector(".input");
+const searchInput = document.querySelector(".input");
 const movieRatings = document.querySelector("#rating-select");
 const movieGenres = document.querySelector("#genre-select");
 
@@ -170,7 +170,7 @@ const createMovieCard = (movies) => {
   }
 };
 
-function getFilteredData(){
+/*function getFilteredData(){
     filteredArrOfMovies = 
     searchValue?.length > 0 
     ? movies.filter(
@@ -194,6 +194,32 @@ function getFilteredData(){
       movie.genre.includes(genre)
     );
   }
+  return filteredArrOfMovies;
+}*/
+
+function getFilteredData() {
+  filteredArrOfMovies = [...movies]; // Start with all movies
+  
+  // Apply search filter
+  if (searchValue.length > 0) {
+    filteredArrOfMovies = filteredArrOfMovies.filter(movie => 
+      movie.name.toLowerCase().includes(searchValue))
+  }
+  
+  // Apply rating filter
+  if (ratings > 0) {
+    filteredArrOfMovies = filteredArrOfMovies.filter(
+      movie => movie.imdb_rating >= ratings
+    );
+  }
+  
+  // Apply genre filter
+  if (genre.length > 0) {
+    filteredArrOfMovies = filteredArrOfMovies.filter(movie =>
+      movie.genre.includes(genre)
+    );
+  }
+  
   return filteredArrOfMovies;
 }
 
@@ -225,7 +251,7 @@ function handleRatingSelector(event){
 
 const debounceInput = debounce(handleSearch, 500);
 
-seachInput.addEventListener("keyup", debounceInput);
+searchInput.addEventListener("keyup", debounceInput);
 
 movieRatings.addEventListener("change", handleRatingSelector);
 
