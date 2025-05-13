@@ -8,8 +8,6 @@ let ratings = 0;
 let genre = "";
 let filteredArrOfMovies = [];
 
-const URL = "https://movies-app.prakashsakari.repl.co/api/movies";
-
 let movies = [
   {
     "id": 1,
