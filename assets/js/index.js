@@ -15,6 +15,9 @@ let movies = [
     "id": 1,
     "name": "The Shawshank Redemption",
     "genre": "Drama",
+    "cast": ["Tim Robbins", "Morgen Freeman", "Bob Gunton", "William Sadler", "Clancy Brown", "Gil Bellows", "James Whitmore"],
+    "director": "Frank Darabont",
+    "writer": "Stephen King",
     "imdb_rating": 9.3,
     "duration": 142,
     "img_link": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
@@ -23,6 +26,9 @@ let movies = [
     "id": 2,
     "name": "The Godfather",
     "genre": "Crime, Drama",
+    "cast": ["Marlon Brand", "Al Pacino", "James Caan", "Richard Castelano", "Robert Duvali", "Sterling Hayden", "John Marley", "Richard Conte", "Diane Keaton"],
+    "director": "Francis Ford Coppola",
+    "writer": "Mario Puzo",
     "imdb_rating": 9.2,
     "duration": 175,
     "img_link": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
@@ -31,6 +37,9 @@ let movies = [
     "id": 3,
     "name": "The Dark Knight",
     "genre": "Action, Crime, Drama",
+    "cast": ["Christian Bale", "Heath Ledger"],
+    "director": "Christopher Nolan",
+    "writer": "Jonathan Nolan",
     "imdb_rating": 9.0,
     "duration": 152,
     "img_link": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg"
@@ -39,6 +48,9 @@ let movies = [
     "id": 4,
     "name": "Pulp Fiction",
     "genre": "Crime, Drama",
+    "cast": ["John Travolta", "Samuel L. Jackson", "Uma Thruman", "Harvey Keitel", "Tim Roth", "Amanda Plummer", "Maria de Medeiros", "Ving Rhames", "Eric Stoltz", "Rosanna Arquette", "Christopher Walken", "Bruce Willis"],
+    "director": "Quentin Tarantino",
+    "writer": "Quentin Tarantino",
     "imdb_rating": 8.9,
     "duration": 154,
     "img_link": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
@@ -47,6 +59,9 @@ let movies = [
     "id": 5,
     "name": "Fight Club",
     "genre": "Drama",
+    "cast": ["Brad Pitt", "Edward Norton", "Helena Bonham Carter"],
+    "director": "David Fincher",
+    "writer": "Chuck Palahniuk",
     "imdb_rating": 8.8,
     "duration": 139,
     "img_link": "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
@@ -55,6 +70,9 @@ let movies = [
     "id": 6,
     "name": "Inception",
     "genre": "Action, Adventure, Sci-Fi",
+    "cast": ["Christian Bale", "Heath Ledger"],
+    "director": "Christopher Nolan",
+    "writer": "Jonathan Nolan",
     "imdb_rating": 8.8,
     "duration": 148,
     "img_link": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg"
@@ -63,6 +81,9 @@ let movies = [
     "id": 7,
     "name": "The Matrix",
     "genre": "Action, Sci-Fi",
+    "cast": ["Keanu Reeves", "Laurence Fishburne"],
+    "director": "Joel Silver",
+    "writer": "The Wachowski Brothers",
     "imdb_rating": 8.7,
     "duration": 136,
     "img_link": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
@@ -71,6 +92,9 @@ let movies = [
     "id": 8,
     "name": "Goodfellas",
     "genre": "Biography, Crime, Drama",
+    "cast": ["Ray Liotta", "Robert De Niro", "Joe Pesci"],
+    "director": "Irwin Winkler",
+    "writer": "Martin Scorsese",
     "imdb_rating": 8.7,
     "duration": 146,
     "img_link": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
@@ -79,6 +103,9 @@ let movies = [
     "id": 9,
     "name": "The Silence of the Lambs",
     "genre": "Crime, Drama, Thriller",
+    "cast": ["Jodie Foster", "Anthony Hopkins", "Scott Glenn"],
+    "director": "Jonathan Demme",
+    "writer": "Thomas Harris",
     "imdb_rating": 8.6,
     "duration": 118,
     "img_link": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
@@ -87,6 +114,9 @@ let movies = [
     "id": 10,
     "name": "Interstellar",
     "genre": "Adventure, Drama, Sci-Fi",
+    "cast": ["Mathew McConaughey", "Anne Hathaway", "Jessica Chastain", "Michael Cain"],
+    "director": "Christopher Nolan",
+    "writer": ["Jonathan Nolan", "Christopher Nolan"],
     "imdb_rating": 8.6,
     "duration": 169,
     "img_link": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
@@ -170,35 +200,8 @@ const createMovieCard = (movies) => {
   }
 };
 
-/*function getFilteredData(){
-    filteredArrOfMovies = 
-    searchValue?.length > 0 
-    ? movies.filter(
-    (movie) => 
-      searchValue === movie.name.toLocaleLowerCase()
-    || searchValue === director_name.toLowerCase()
-    || movie.writter_name.toLowerCase().split(",").includes(searchValue)
-    || movie.cast_name.toLowerCase().split(",").includes(searchValue)
-  ) 
-  : movies;
-  if (ratings > 0){
-    filteredArrOfMovies = searchValue?.length > 0 
-    ? filteredArrOfMovies : movies;
-    filteredArrOfMovies = filteredArrOfMovies.filter(
-      movie => movie.imdb_rating >= ratings);
-  }
-  if (genre?.length > 0) {
-    filteredArrOfMovies =
-      searchValue?.length > 0 || ratings > 7 ? filteredArrOfMovies : movies;
-    filteredArrOfMovies = filteredArrOfMovies.filter((movie) =>
-      movie.genre.includes(genre)
-    );
-  }
-  return filteredArrOfMovies;
-}*/
-
 function getFilteredData() {
-  filteredArrOfMovies = [...movies]; // Start with all movies
+  filteredArrOfMovies = [...movies];
   
   // Apply search filter
   if (searchValue.length > 0) {
